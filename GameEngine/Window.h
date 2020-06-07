@@ -13,13 +13,15 @@ public:
 	bool release();
 	bool isRun();
 
-	//EVENTS
+	RECT getClientWindowRect();
+	void setHWND(HWND hwnd);
+
 	virtual void onCreate();
 	virtual void onUpdate();
 	virtual void onDestroy();
 
-
 	~Window();
+
 protected:
 	HWND m_hwnd;
 	bool m_is_run;
