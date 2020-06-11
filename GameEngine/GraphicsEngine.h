@@ -2,6 +2,7 @@
 //#pragma comment(lib,"d3d11.lib")
 #include <d3d11.h>
 class SwapChain;
+class DeviceContext;
 
 class GraphicsEngine
 {
@@ -13,6 +14,7 @@ public:
 	static GraphicsEngine* get();
 
 	SwapChain * createSwapChain();
+	DeviceContext* getImmediateDeviceContext();
 
 private:
 #pragma region Initialization
@@ -28,6 +30,6 @@ private:
 	friend class SwapChain;
 #pragma endregion
 
-	
+	DeviceContext * m_imm_device_context;
 };
 
