@@ -79,6 +79,7 @@ SwapChain * GraphicsEngine::createSwapChain()
 }
 
 
+
 DeviceContext * GraphicsEngine::getImmediateDeviceContext()
 {
 	return this->m_imm_device_context;
