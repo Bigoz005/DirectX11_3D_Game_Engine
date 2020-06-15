@@ -3,6 +3,7 @@
 
 class SwapChain;
 class VertexBuffer;
+class VertexShader;
 
 class DeviceContext
 {
@@ -16,6 +17,8 @@ public:
 
 	void setViewportSize(UINT width, UINT height);
 	
+	void setVertexShader(VertexShader* vertex_shader);
+
 	~DeviceContext();
 
 private:

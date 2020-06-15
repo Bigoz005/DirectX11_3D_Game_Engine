@@ -5,6 +5,7 @@
 class SwapChain;
 class DeviceContext;
 class VertexBuffer;
+class VertexShader;
 
 
 class GraphicsEngine
@@ -19,10 +20,13 @@ public:
 	SwapChain * createSwapChain();
 	DeviceContext* getImmediateDeviceContext();
 	VertexBuffer* createVertexBuffer();
+	VertexShader* createVertexShader(const void * shader_byte_code, size_t byte_code_size);
+
+	bool compileVertexShader(const wchar_t* file_name, const char* entry_point_name, void** shader_byte_code, size_t* byte_code_size);
+	void releaseCompiledShader();
 
 	bool createShaders();
 	bool setShaders();
-	void getShaderBufferAndSize(void ** bytecode, UINT * size);
 
 private:
 #pragma region Initialization
@@ -45,7 +49,16 @@ private:
 
 #pragma endregion
 
+#pragma region VertexShader
+	friend class VertexShader;
+
+#pragma endregion
+
 #pragma region Shader
+	ID3DBlob* m_blob = nullptr;
+
+
+
 	ID3DBlob* m_vsblob = nullptr;
 	ID3DBlob* m_psblob = nullptr;
 	ID3D11VertexShader* m_vs = nullptr;
