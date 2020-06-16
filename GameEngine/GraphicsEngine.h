@@ -6,6 +6,7 @@ class SwapChain;
 class DeviceContext;
 class VertexBuffer;
 class VertexShader;
+class PixelShader;
 
 
 class GraphicsEngine
@@ -21,12 +22,12 @@ public:
 	DeviceContext* getImmediateDeviceContext();
 	VertexBuffer* createVertexBuffer();
 	VertexShader* createVertexShader(const void * shader_byte_code, size_t byte_code_size);
+	PixelShader* createPixelShader(const void * shader_byte_code, size_t byte_code_size);
 
 	bool compileVertexShader(const wchar_t* file_name, const char* entry_point_name, void** shader_byte_code, size_t* byte_code_size);
-	void releaseCompiledShader();
+	bool compilePixelShader(const wchar_t* file_name, const char* entry_point_name, void** shader_byte_code, size_t* byte_code_size);
 
-	bool createShaders();
-	bool setShaders();
+	void releaseCompiledShader();
 
 private:
 #pragma region Initialization
@@ -51,6 +52,11 @@ private:
 
 #pragma region VertexShader
 	friend class VertexShader;
+
+#pragma endregion
+
+#pragma region PixelShader
+	friend class PixelShader;
 
 #pragma endregion
 
