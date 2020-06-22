@@ -64,7 +64,7 @@ void DeviceContext::setConstantBuffer(VertexShader * vertex_shader, ConstantBuff
 
 void DeviceContext::setConstantBuffer(PixelShader * pixel_shader, ConstantBuffer * buffer)
 {
-	m_device_context->VSSetConstantBuffers(0, 1, &buffer->m_buffer);
+	m_device_context->PSSetConstantBuffers(0, 1, &buffer->m_buffer);
 }
 
 
