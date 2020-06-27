@@ -12,23 +12,28 @@ class AppWindow : public Window
 {
 public:
 	AppWindow();
+
+	void updateQuadPosition();
+
 	~AppWindow();
 
-#pragma region Window States
+	// Inherited via Window
 	virtual void onCreate() override;
 	virtual void onUpdate() override;
 	virtual void onDestroy() override;
-#pragma endregion
 
 private:
-	SwapChain* m_swap_chain;
+	SwapChain * m_swap_chain;
 	VertexBuffer* m_vb;
-	ConstantBuffer* m_cb;
 	VertexShader* m_vs;
 	PixelShader* m_ps;
+	ConstantBuffer* m_cb;
 
-	unsigned long m_old_time = 0;
-	float m_delta_time = 0;
-	float m_angle = 0;
+	long m_old_delta;
+	long m_new_delta;
+	float m_delta_time;
+
+	float m_delta_pos;
+	float m_delta_scale;
+	float m_delta_rot;
 };
-
