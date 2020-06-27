@@ -2,6 +2,7 @@
 #include "SwapChain.h"
 #include "DeviceContext.h"
 #include "VertexBuffer.h"
+#include "IndexBuffer.h"
 #include "ConstantBuffer.h"
 #include "VertexShader.h"
 #include "PixelShader.h"
@@ -67,7 +68,6 @@ bool GraphicsEngine::release()
 
 	m_imm_device_context->release();
 
-
 	m_d3d_device->Release();
 	return true;
 }
@@ -95,6 +95,11 @@ VertexBuffer * GraphicsEngine::createVertexBuffer()
 ConstantBuffer * GraphicsEngine::createConstantBuffer()
 {
 	return new ConstantBuffer();
+}
+
+IndexBuffer * GraphicsEngine::createIndexBuffer()
+{
+	return new IndexBuffer();
 }
 
 VertexShader * GraphicsEngine::createVertexShader(const void * shader_byte_code, size_t byte_code_size)

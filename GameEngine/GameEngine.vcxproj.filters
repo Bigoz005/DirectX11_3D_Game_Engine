@@ -28,14 +28,14 @@
     <Filter Include="GameEngine\GraphicsEngine\PixelShader">
       <UniqueIdentifier>{8b5e97df-cdd4-47d8-a752-4afc174d2d3c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameEngine\GraphicsEngine\DeviceContext\ConstantBuffer">
-      <UniqueIdentifier>{b2586bc7-a565-409a-b58f-dcfda3f219f1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="GameEngine\GraphicsEngine\ConstantBuffer">
       <UniqueIdentifier>{bedd70c3-1b59-419f-8ea8-f28576a3d64c}</UniqueIdentifier>
     </Filter>
     <Filter Include="GameEngine\Math">
       <UniqueIdentifier>{2d28366c-8c82-4764-84d9-db97a496f427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\IndexBuffer">
+      <UniqueIdentifier>{2b6e761b-6974-482c-9e41-c2e445e660b6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +68,9 @@
     </ClCompile>
     <ClCompile Include="ConstantBuffer.cpp">
       <Filter>GameEngine\GraphicsEngine\ConstantBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>GameEngine\GraphicsEngine\IndexBuffer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="Matrix4x4.h">
       <Filter>GameEngine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>GameEngine\GraphicsEngine\IndexBuffer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
