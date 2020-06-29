@@ -1,3 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (DirectXGame.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
   AppWindow.cpp
+  InputSystem.cpp
+  main.cpp
+  Generowanie kodu...
   GameEngine.vcxproj -> C:\Users\micha\Desktop\Game Engine\DirectX11_3D_Game_Engine\Debug\GameEngine.exe
